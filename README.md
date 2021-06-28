@@ -1,7 +1,7 @@
 # PokeWeather
 ## Information
 - [Figma Project](https://www.figma.com/file/A0WTKcNuGolUQZWI04PK4P/PokeWeather?node-id=0%3A1)
-- [Live Version](https://https://pokeweather.netlify.app/)
+- [Live Version](https://pokeweather.netlify.app/)
 
 ## How to Run
 In the project directory, 
