@@ -11,7 +11,7 @@ import rockIcon from '../assets/types-icons/rock.svg';
 
 export function getPokemonType({ temperature, isRaining }) {
   if (isRaining) return "electric";
-
+  console.log(temperature);
   const types = {
     [temperature < 5]: "ice",
     [temperature >= 5 && temperature < 10]: "water",
@@ -31,7 +31,6 @@ export function getFiveRandomPokemons(pokemonsList) {
     const random = Math.floor(Math.random() * pokemonsList.length) + 1;
     if (pokemons.filter(pokemonObject => pokemonObject.name === pokemonsList[random].pokemon.name)) pokemons.push(pokemonsList[random].pokemon);
   }
-  console.log(pokemons);
   return pokemons;
 }
 

@@ -39,17 +39,18 @@ const Weather = () => {
       try {
         const weather = await getCityWeather(city);
         setWeather(weather);
+        const pokemonType = getPokemonType(weather);
+        setPokemonType(pokemonType);
+        const pokemonsList = await getPokemonsByType(pokemonType);
+        const pokemons = await fetchAllPokemonsData(pokemonsList);
+        setPokemons(pokemons);
+        setLoading(false);
       } catch (error) {
         setCityError(true);
         setLoading(false);
         return;
       }
-      const pokemonType = getPokemonType(weather);
-      setPokemonType(pokemonType);
-      const pokemonsList = await getPokemonsByType(pokemonType);
-      const pokemons = await fetchAllPokemonsData(pokemonsList);
-      setPokemons(pokemons);
-      setLoading(false);
+
     }
     city && fetchAll();
   }, [city]);
