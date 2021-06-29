@@ -19,7 +19,10 @@ export const Container = styled.div`
 
   a {
     font-size: 1.25rem;
+    padding: 8px;
+    background-color: ${({ type }) => `var(--${type}-dark)`};
     color: white;
+    border-radius: 5px;
     transition: color 0.2s;
     
     &:hover {
@@ -28,7 +31,7 @@ export const Container = styled.div`
   } 
   
   @media(min-width: 1024px) {
-    height: 100vh;
+    min-height: 100vh;
   }
 `;
 
@@ -50,6 +53,7 @@ export const LocationInfo = styled.section`
       font-weight: 300;
     }
   }
+  
   span {
     &:first-of-type {
       font-size: 3rem; 
@@ -66,8 +70,14 @@ export const LocationInfo = styled.section`
   @media (max-width: 767px) {
     flex-wrap: wrap;
     justify-content: center;
+
+    svg {
+      width: 25%;
+    }
+
     div {
-      h1 {
+      width: 70%;
+        h1 {
       font-size: 3rem;
       }
     }

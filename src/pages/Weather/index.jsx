@@ -73,7 +73,7 @@ const Weather = () => {
   return (
     <>
       <BodyStyle type={pokemonType} icon={pokemonTypeIcon[pokemonType]} />
-      <Container>
+      <Container type={pokemonType}>
         <LocationInfo>
           <FiMapPin size={72} color={'white'} />
           <div>
